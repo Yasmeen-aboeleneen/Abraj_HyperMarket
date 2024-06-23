@@ -1,4 +1,4 @@
  
 import 'package:abraj_hypermarket/Core/Utils/Constants/Images.dart';
 
-const swiper = [img1, img2,];
+const swiper = [onboarding1,onboarding2,onboarding3, ];

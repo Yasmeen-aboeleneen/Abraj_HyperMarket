@@ -1,10 +1,8 @@
- 
 import 'package:abraj_hypermarket/Views/Widgets/Custom_Search_TextField.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../Core/Utils/Components/Lists.dart';
- 
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -25,13 +23,19 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
       child: Column(
         children: [
           Container(
-            width: w,
             height: h * .17,
-            // child: Image.asset(
-            //   'Assets/Images/pic2.png',
-            //   width: w,
-            //   fit: BoxFit.fill,
-            // ),
+            width: w,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                      'Assets/Images/4.jpg',
+                    ),
+                    fit: BoxFit.cover),
+                color: Color.fromARGB(255, 0, 186, 40),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                  // bottomRight: Radius.circular(25)
+                )),
           ),
           SizedBox(
             height: h * .01,
@@ -44,9 +48,11 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
               itemCount: swiper.length,
               itemBuilder: (context, index) {
                 return Container(
-                  width: w*.7,
-                   
-                  child: Image.asset(swiper[index],fit: BoxFit.fitWidth,),
+                  width: w * .6,
+                  child: Image.asset(
+                    swiper[index],
+                    fit: BoxFit.fitWidth,
+                  ),
                 );
               })
         ],

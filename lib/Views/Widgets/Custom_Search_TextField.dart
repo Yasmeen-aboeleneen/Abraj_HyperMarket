@@ -7,7 +7,7 @@ class CustomSearchTextfield extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: 'Search in Gomla Market',
+        hintText: 'Search in Abraj Hyper',
         suffixIcon: const Icon(
           Icons.search,
           size: 25,
