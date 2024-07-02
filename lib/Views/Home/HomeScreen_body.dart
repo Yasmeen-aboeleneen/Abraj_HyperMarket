@@ -1,8 +1,6 @@
-import 'package:abraj_hypermarket/Views/Widgets/Custom_Search_TextField.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
-import '../../Core/Utils/Components/Lists.dart';
+import '../Widgets/Custom_Search_TextField.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -21,40 +19,63 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
       height: h,
       width: w,
       child: Column(
-        children: [
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [ 
           Container(
-            height: h * .17,
-            width: w,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(
-                      'Assets/Images/4.jpg',
-                    ),
-                    fit: BoxFit.cover),
-                color: Color.fromARGB(255, 0, 186, 40),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  // bottomRight: Radius.circular(25)
-                )),
+            child: Stack(
+              
+            ),
           ),
-          SizedBox(
-            height: h * .01,
+          const SizedBox(
+            height: 1,
           ),
-          const Padding(
-            padding: EdgeInsets.all(12),
-            child: CustomSearchTextfield(),
-          ),
-          VxSwiper.builder(
-              itemCount: swiper.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  width: w * .6,
-                  child: Image.asset(
-                    swiper[index],
-                    fit: BoxFit.fitWidth,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SizedBox(width: w * .8, child: const CustomSearchTextfield()),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 25, 149, 76),
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 0, 186, 40),
+                            width: 2),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10))),
+                    width: w * .1,
+                    height: h * .06,
+                    child: Icon(Icons.mic_none,
+                        size: h * .04, color: Colors.white),
                   ),
-                );
-              })
+                ),
+              ],
+            ),
+          )
+          // SizedBox(
+          //   height: h * .01,
+          // ),
+          // const Padding(
+          //   padding: EdgeInsets.all(12),
+          //   child: CustomSearchTextfield(),
+          // ),
+          // VxSwiper.builder(
+          //     aspectRatio: 16 / 9,
+          //     autoPlay: true,
+          //     itemCount: swiper.length,
+          //     itemBuilder: (context, index) {
+          //       return Image.asset(
+          //         swiper[index],
+          //         fit: BoxFit.fitWidth,
+          //       )
+          //           .box
+          //           .rounded
+          //           .clip(Clip.antiAlias)
+          //           .margin(const EdgeInsets.all(7))
+          //           .make();
+          //     })
         ],
       ),
     );

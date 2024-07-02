@@ -1,5 +1,7 @@
 import 'package:abraj_hypermarket/Views/Splash/Splash_Screen.dart';
+import 'package:abraj_hypermarket/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -9,22 +11,26 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale:const Locale('ar'),
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       title: 'Abraj Hypermarket',
       theme: ThemeData(
-        
-         scaffoldBackgroundColor: Colors.transparent,
+        scaffoldBackgroundColor: Colors.transparent,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
         ),
       ),
-       home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
-
- 
