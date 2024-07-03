@@ -2,6 +2,7 @@ import 'package:abraj_hypermarket/Views/Home/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../Core/Utils/Constants/Colors.dart';
 import '../Widgets/Custom_Pass_TextField.dart';
 import '../Widgets/Custom_TextField.dart';
 
@@ -29,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 image: DecorationImage(
                     image: AssetImage('Assets/Images/2.jpg'),
                     fit: BoxFit.cover),
-                color: Color.fromARGB(255, 0, 186, 40),
+                color: kPrimary,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(25),
                     bottomRight: Radius.circular(25))),
@@ -75,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               Checkbox(
                   checkColor: Colors.white,
-                  activeColor: const Color.fromARGB(255, 0, 186, 40),
+                  activeColor: kPrimary,
                   value: isCheck,
                   onChanged: (newValue) {
                     setState(() {
@@ -116,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(
                       isCheck == true
-                          ? const Color.fromARGB(255, 0, 186, 40)
+                          ? kPrimary
                           : const Color.fromARGB(255, 93, 92, 92),
                     ),
                   ),
@@ -145,7 +146,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Text(' Log in',
                       style: TextStyle(
                           fontSize: w * .04,
-                          color: const Color.fromARGB(255, 0, 186, 40)))
+                          color: kPrimary))
                 ],
               )),
         ]));

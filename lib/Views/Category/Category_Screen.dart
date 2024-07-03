@@ -33,7 +33,7 @@ class CategoryScreen extends StatelessWidget {
             child: const SingleChildScrollView(
               child: Column(
                 children: [
-                  Wrap(direction: Axis.horizontal, spacing: 10, children: [
+                  Wrap(direction: Axis.horizontal, spacing: 11.2, children: [
                     CustomCategory(
                       color: kSecondary,
                       image:
@@ -88,7 +88,7 @@ class CategoryScreen extends StatelessWidget {
                           'https://i.pinimg.com/564x/43/31/26/433126de0f6e345bab5d1ab733bf5064.jpg',
                       categoryTitle: 'Grocery',
                     ),
-                     CustomCategory(
+                    CustomCategory(
                       color: kbrown,
                       image:
                           'https://i.pinimg.com/564x/9d/25/93/9d2593780fe22eba7acf1ea6e9e57110.jpg',
@@ -106,8 +106,6 @@ class CategoryScreen extends StatelessWidget {
                           'https://i.pinimg.com/564x/e4/c7/77/e4c7779567bdd86532aae01eefbac6a8.jpg',
                       categoryTitle: 'Home care',
                     ),
-                    
-                     
                   ]),
                 ],
               ),

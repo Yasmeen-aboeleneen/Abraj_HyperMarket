@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Core/Utils/Constants/Colors.dart';
+
 class CustomPassTextField extends StatefulWidget {
   const CustomPassTextField({
     Key? key,
@@ -44,7 +46,7 @@ class _CustomPassTextFieldState extends State<CustomPassTextField> {
                         ? Icons.visibility_off_rounded
                         : Icons.visibility_rounded,
                     size: 24,
-                    color:Color.fromARGB(255, 0, 186, 40) ,
+                    color:kPrimary ,
                   ),
                 ),
               ),
@@ -52,15 +54,15 @@ class _CustomPassTextFieldState extends State<CustomPassTextField> {
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                   borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 0, 186, 40), width: 2)),
+                      color: kPrimary, width: 2)),
               hintText: widget.hint,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25),
                 borderSide: const BorderSide(
-                    color: Color.fromARGB(255, 0, 186, 40), width: 2),
+                    color: kPrimary, width: 2),
               ),
             ),
-            cursorColor: const Color.fromARGB(255, 0, 186, 40),
+            cursorColor: kPrimary,
           ),
         )
       ],

@@ -1,3 +1,4 @@
+import 'package:abraj_hypermarket/Core/Utils/Constants/Colors.dart';
 import 'package:abraj_hypermarket/Views/Auth/signUp_Screen.dart';
 import 'package:abraj_hypermarket/Views/Home/HomeScreen.dart';
 import 'package:abraj_hypermarket/Views/Widgets/Custom_Pass_TextField.dart';
@@ -33,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Assets/Images/2.jpg',
                     ),
                     fit: BoxFit.cover),
-                color: Color.fromARGB(255, 0, 186, 40),
+                color: kPrimary,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(25),
                     bottomRight: Radius.circular(25))),
@@ -67,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Checkbox(
                     checkColor: Colors.white,
-                    activeColor: const Color.fromARGB(255, 0, 186, 40),
+                    activeColor: kPrimary,
                     value: isCheck,
                     onChanged: (newValue) {
                       setState(() {
@@ -95,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text(
                       'Forget password?',
                       style: TextStyle(
-                          fontSize: 15, color: Color.fromARGB(255, 0, 186, 40)),
+                          fontSize: 15, color: kPrimary),
                     )),
               ],
             ),
@@ -107,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: TextButton(
                   style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(
-                      Color.fromARGB(255, 0, 186, 40),
+                      kPrimary,
                     ),
                   ),
                   onPressed: () {
@@ -130,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text(
                       "Don't have an account? Sign up",
                       style: TextStyle(
-                          fontSize: 15, color: Color.fromARGB(255, 0, 186, 40)),
+                          fontSize: 15, color: kPrimary),
                     ))),
           ),
           const Padding(
@@ -139,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Expanded(
                   child: Divider(
-                    color: Color.fromARGB(255, 0, 186, 40),
+                    color: kPrimary,
                     thickness: 3,
                   ),
                 ),
@@ -152,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Expanded(
                   child: Divider(
-                    color: Color.fromARGB(255, 0, 186, 40),
+                    color: kPrimary,
                     thickness: 3,
                   ),
                 ),
@@ -168,7 +169,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 decoration: BoxDecoration(
                     border: Border.all(
-                        color: const Color.fromARGB(255, 0, 186, 40), width: 2),
+                        color: kPrimary, width: 2),
                     borderRadius: const BorderRadius.all(Radius.circular(25))),
                 width: w * .4,
                 height: h * .06,
@@ -202,7 +203,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 decoration: BoxDecoration(
                     border: Border.all(
-                        color: const Color.fromARGB(255, 0, 186, 40), width: 2),
+                        color: kPrimary, width: 2),
                     borderRadius: const BorderRadius.all(Radius.circular(25))),
                 width: w * .4,
                 height: h * .06,

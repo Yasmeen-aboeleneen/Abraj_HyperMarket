@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Core/Utils/Constants/Colors.dart';
+
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     Key? key,
@@ -18,14 +20,14 @@ class CustomTextField extends StatelessWidget {
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                   borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 0, 186, 40), width: 2)),
+                      color: kPrimary, width: 2)),
               hintText: hint,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                   borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 0, 186, 40), width: 2)),
+                      color: kPrimary, width: 2)),
             ),
-            cursorColor: const Color.fromARGB(255, 0, 186, 40),
+            cursorColor: kPrimary,
           ),
         )
       ],
