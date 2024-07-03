@@ -1,4 +1,5 @@
 import 'package:abraj_hypermarket/Views/Widgets/RadioCheck.dart';
+import 'package:abraj_hypermarket/Views/Widgets/SwitchMode.dart';
 import 'package:flutter/material.dart';
 import 'package:abraj_hypermarket/Views/Widgets/CustomContainer.dart';
 import '../../Core/Utils/Constants/Colors.dart';
@@ -53,13 +54,33 @@ class _SettingScreenState extends State<SettingScreen> {
                       height: h * .02,
                     ),
                     Customcontainer(
-                      child:const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Theme',
-                              style: TextStyle(
-                                  fontSize: 13, fontWeight: FontWeight.w600)),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Theme',
+                                style: TextStyle(
+                                    fontSize: 13, fontWeight: FontWeight.w600)),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Switchmode(
+                                    icon: Icon(Icons.sunny),
+                                    onpressed: () {},
+                                    text: 'Light',
+                                    colorr: kSecondaryLight,
+                                    iconColor: Colors.yellow.shade700),
+                                Switchmode(
+                                    icon: Icon(Icons.sunny_snowing),
+                                    onpressed: () {},
+                                    text: 'Dark',
+                                    colorr: kDark,
+                                    iconColor: const Color.fromARGB(
+                                        255, 166, 92, 179)),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
