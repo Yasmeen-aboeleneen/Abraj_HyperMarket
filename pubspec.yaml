@@ -61,7 +61,12 @@ flutter:
     - Assets\Images\4.jpg
     - Assets\Images\onboarding2.png
     - Assets\Images\onboarding3.png
-    - Assets\Images\5.jpeg
+    - Assets\Images\4.jpg
+    - Assets\Images\5.jpg
+    - Assets\Images\6.jpg
+    - Assets\Images\7.jpg
+    - Assets\Images\8.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

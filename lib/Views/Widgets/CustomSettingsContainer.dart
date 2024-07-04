@@ -1,9 +1,7 @@
 import 'package:abraj_hypermarket/Views/Widgets/CustomContainer.dart';
 import 'package:flutter/material.dart';
-
 import '../../Core/Utils/Constants/Colors.dart';
 import 'RadioCheck.dart';
-import 'SwitchMode.dart';
 
 class Customsettingscontainer extends StatelessWidget {
   const Customsettingscontainer({super.key});
@@ -29,38 +27,6 @@ class Customsettingscontainer extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 13, fontWeight: FontWeight.w600)),
                     RadioCheck()
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: h * .06,
-            ),
-            Customcontainer(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('Theme',
-                        style: TextStyle(
-                            fontSize: 13, fontWeight: FontWeight.w600)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Switchmode(
-                            icon: const Icon(Icons.sunny),
-                            onpressed: () {},
-                            text: 'Light',
-                            colorr: kSecondaryLight,
-                            iconColor: Colors.yellow.shade700),
-                        Switchmode(
-                            icon: const Icon(Icons.sunny_snowing),
-                            onpressed: () {},
-                            text: 'Dark',
-                            colorr: kDark,
-                            iconColor: const Color.fromARGB(255, 166, 92, 179)),
-                      ],
-                    ),
                   ],
                 ),
               ),

@@ -32,14 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
     const CategoryScreen(),
     const CartScreen(),
     const ProfileScreen(),
-     SettingScreen(),
+    SettingScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset:false ,
+          resizeToAvoidBottomInset: false,
           backgroundColor: kveryWhite,
           body: Column(
             children: [

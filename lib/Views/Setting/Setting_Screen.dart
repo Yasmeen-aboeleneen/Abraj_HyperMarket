@@ -1,3 +1,4 @@
+import 'package:abraj_hypermarket/Core/Utils/Constants/Colors.dart';
 import 'package:abraj_hypermarket/Views/Widgets/CustomSettingsContainer.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class _SettingScreenState extends State<SettingScreen> {
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.white,
+      color: kveryWhite,
       height: h,
       width: w,
       child: Padding(
