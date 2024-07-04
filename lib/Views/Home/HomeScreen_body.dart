@@ -24,13 +24,13 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(left: 8, top: 11, bottom: 11),
             child: Customaddressbar(),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(9),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(width: w * .8, child: const CustomSearchTextfield()),
                 GestureDetector(
@@ -54,9 +54,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             height: h * .01,
           ),
           Container(
-            padding: EdgeInsets.all(9),
+            padding:const EdgeInsets.only(left: 8, right: 8),
             color: kveryWhite,
-            height: h * .66,
+            height: h * .64,
             width: w,
             child: SingleChildScrollView(
               child: Column(
@@ -65,6 +65,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                       aspectRatio: 16 / 9,
                       autoPlay: true,
                       itemCount: swiper.length,
+                      height: 165,
+                      enlargeCenterPage: true,
                       itemBuilder: (context, index) {
                         return Image.asset(
                           swiper[index],

@@ -7,6 +7,7 @@ class Customaddressbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final w = MediaQuery.of(context).size.width;
+
     return Container(
         child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,14 +23,24 @@ class Customaddressbar extends StatelessWidget {
           children: [
             Text(
               'Delivering to',
-              style: TextStyle(color: kDark),
+              style: TextStyle(color: kPrimary, fontWeight: FontWeight.w500),
             ),
             SizedBox(
               height: 17,
-              child: Text(
-                'Mansoura city , suez canal st',
-                style: TextStyle(color: kDark),
-                overflow: TextOverflow.ellipsis,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.location_on,
+                    size: 15,
+                    color: kPrimary,
+                  ),
+                  Text(
+                    'Mansoura city , suez canal st',
+                    maxLines: 3,
+                    style: TextStyle(color: kGrey, fontWeight: FontWeight.w400),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ),
             ),
           ],
