@@ -22,7 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> navItems = [
     const Icon(Icons.home, color: Colors.white),
     const Icon(Icons.dashboard, color: Colors.white),
-    const Icon(Icons.shopping_cart, color: Colors.white),
+    const Badge(
+        label: Text('1'),
+        child: Icon(Icons.shopping_cart, color: Colors.white)),
     const Icon(Icons.person, color: Colors.white),
     const Icon(Icons.settings, color: Colors.white),
   ];
